@@ -3,36 +3,8 @@ search: false
 ---
 
 @charset "utf-8";
-
-@import "vendor/breakpoint/breakpoint"; // media query mixins
-@import "variables";
-@import "mixins";
-@import "vendor/susy/susy";
-
-@import "reset";
-@import "base";
-
-@import "utilities";
-@import "animations";
-@import "tables";
-@import "buttons";
-@import "notices";
-@import "masthead";
-@import "navigation";
-@import "footer";
-@import "syntax";
-
-@import "forms";
-
-@import "page";
-@import "archive";
-@import "sidebar";
-
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
-@import "vendor/magnific-popup/magnific-popup";
-@import "print";
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
 
 .paper-box {
     display: flex;
@@ -61,21 +33,24 @@ search: false
         order: 1;
     }
     
-    @include breakpoint($medium) {
-        .paper-box-image{
-            justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
-            order: 1;
-        }
-        
-        .paper-box-text{
-            justify-content: left;
-            padding-left: 2em;
-            max-width: 60%;
-            order: 2;
-        }
+}
+
+@media screen and (min-width: 48em) {
+    .paper-box .paper-box-image{
+        justify-content: left;
+        min-width: 200px;
+        max-width: 40%;
+        order: 1;
     }
+    
+    .paper-box .paper-box-text{
+        justify-content: left;
+        padding-left: 2em;
+        max-width: 60%;
+        order: 2;
+    }
+
+
 }
 
 $scroll_offset : 2em;
