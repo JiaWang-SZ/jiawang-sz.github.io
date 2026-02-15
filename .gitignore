@@ -5,3 +5,5 @@ vendor/
 .jekyll-metadata
 .sass-cache/
 .DS_Store
+.gem/
+.ruby_compat/
