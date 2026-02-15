@@ -8,7 +8,11 @@
 # Site Settings
 title                    : "王佳"
 description              : "推荐系统，数据挖掘，LLM大模型"
-repository               : "jiawang-sz/jiawang.github.io"
+url                      : "https://jiawang-sz.github.io"
+baseurl                  : ""
+repository               : "JiaWang-SZ/jiawang-sz.github.io"
+remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin    : "default"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -140,6 +144,8 @@ timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_
 
 # Plugins
 plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -147,6 +153,8 @@ plugins:
   - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-remote-theme
+  - jekyll-include-cache
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
